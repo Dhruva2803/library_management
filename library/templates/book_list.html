@@ -1,0 +1,27 @@
+{%load static%}
+<html>
+<head>
+    <title>Books</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+  <h1>Books</h1>
+  <form method="get">
+    <input type="text" name="q" placeholder="Search by title or author">
+    <button type="submit">Search</button>
+  </form>
+  <a href="/books/add/">Add Book</a>
+  <table border="1">
+    <tr><th>Title</th><th>Author</th><th>Stock</th></tr>
+    {% for book in books %}
+    <tr>
+      <td>{{ book.title }}</td>
+      <td>{{ book.author }}</td>
+      <td>{{ book.stock }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

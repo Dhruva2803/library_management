@@ -1,0 +1,15 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue Book</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+  <h1>Issue Book</h1>
+  <p style="color:green">{{ msg }}</p>
+  <form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Issue</button></form>
+</body>
+</html>

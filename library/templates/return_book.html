@@ -1,0 +1,19 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Return Book</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+
+<body>
+    {% include "nav.html" %}
+    <h1>Return Book</h1>
+    <p style="color:green">{{ msg }}</p>
+    <form method="post">{% csrf_token %}{{ form.as_p }}
+        <button type="submit">Return</button>
+    </form>
+</body>
+
+</html>

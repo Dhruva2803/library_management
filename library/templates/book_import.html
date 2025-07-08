@@ -1,0 +1,17 @@
+{%load static%}
+<html>
+<head>
+    <title>Import Books</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+  <h1>Import Books from Frappe API</h1>
+  <form method="post">{% csrf_token %}
+    <label>Number of Books:</label><input type="number" name="count"><br>
+    <label>Title (optional):</label><input type="text" name="title"><br>
+    <button type="submit">Import</button>
+  </form>
+</body>
+</html>

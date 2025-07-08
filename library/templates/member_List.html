@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Members</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+  <h1>Members</h1>
+  <a href="/members/add/">Add Member</a>
+  <table border="1">
+    <tr><th>Name</th><th>Email</th><th>Debt</th></tr>
+    {% for member in members %}
+    <tr>
+      <td>{{ member.name }}</td>
+      <td>{{ member.email }}</td>
+      <td>{{ member.debt }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

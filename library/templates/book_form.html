@@ -1,0 +1,18 @@
+{%load static%}
+<html>
+<head>
+  <title>Add Book</title>
+  <link rel="stylesheet" href="{%static 'style.css' %}">
+  <link rel="icon" href="{%static 'favion.png' %}">
+</head>
+
+<body>
+  {% include "nav.html" %}
+  <h1>Add Book</h1>
+  <form method="post">
+    {% csrf_token %}{{ form.as_p }}
+    <button type="submit">Save</button>
+  </form>
+</body>
+
+</html>

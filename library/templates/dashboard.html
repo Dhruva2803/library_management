@@ -1,0 +1,32 @@
+{%load static%}
+<html>
+
+<head>
+    <title>Library Dashboard</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+
+<body>
+    {% include "nav.html" %}
+    <h1>Library Dashboard</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+        <div
+            style="flex: 1; min-width: 200px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2>Total Books</h2>
+            <p style="font-size: 24px;">{{ total_books }}</p>
+        </div>
+        <div
+            style="flex: 1; min-width: 200px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2>Total Members</h2>
+            <p style="font-size: 24px;">{{ total_members }}</p>
+        </div>
+        <div
+            style="flex: 1; min-width: 200px; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h2>Books Issued</h2>
+            <p style="font-size: 24px;">{{ total_issued }}</p>
+        </div>
+    </div>
+</body>
+
+</html>

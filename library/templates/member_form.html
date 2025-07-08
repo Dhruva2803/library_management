@@ -1,0 +1,14 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+    <link rel="stylesheet" href="{%static 'style.css' %}">
+    <link rel="icon" href="{%static 'favicon.png' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+  <h1>Add Member</h1>
+  <form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Save</button></form>
+</body>
+</html>
